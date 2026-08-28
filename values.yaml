@@ -2,7 +2,19 @@
 
 # Cloudflare parameters.
 cloudflare:
+  # The Cloudflare Tunnel token. Used to create a chart-managed Secret unless
+  # existingSecret.name is set below.
   tunnel_token: ""
+
+  # Reference an existing Kubernetes Secret instead of letting the chart
+  # create one from cloudflare.tunnel_token. When existingSecret.name is set,
+  # the chart will not create its own Secret, and cloudflare.tunnel_token is
+  # ignored.
+  existingSecret:
+    # Name of the existing Secret containing the tunnel token.
+    name: ""
+    # Key within the existing Secret that holds the tunnel token.
+    key: tunnelToken
 
 image:
   repository: cloudflare/cloudflared
