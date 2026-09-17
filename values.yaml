@@ -73,3 +73,7 @@ affinity: {}
 
 # Spread connector Pods across failure domains such as Kubernetes nodes.
 topologySpreadConstraints: []
+
+# Optional Deployment strategy. Leave empty to use Kubernetes' default
+# RollingUpdate behavior.
+deploymentStrategy: {}

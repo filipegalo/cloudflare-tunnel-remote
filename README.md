@@ -61,5 +61,6 @@ helm install my-tunnel . \
 | `cloudflare.existingSecret.key` | Key within the existing Secret that holds the tunnel token.                  | `tunnelToken`  |
 | `affinity`                      | Pod affinity and anti-affinity rules for connector placement.                | `{}`           |
 | `topologySpreadConstraints`     | Pod topology-spread constraints for connector placement.                     | `[]`           |
+| `deploymentStrategy`            | Optional Deployment update strategy.                                         | `{}`           |
 
 See [`values.yaml`](values.yaml) for the full list of configurable values.
