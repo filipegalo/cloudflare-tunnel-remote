@@ -68,5 +68,8 @@ nodeSelector: {}
 
 tolerations: []
 
-# Default affinity is to spread out over nodes; use this to override.
+# Pod affinity and anti-affinity rules for connector placement.
 affinity: {}
+
+# Spread connector Pods across failure domains such as Kubernetes nodes.
+topologySpreadConstraints: []
